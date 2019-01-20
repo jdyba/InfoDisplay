@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div appFunctionKeys>
+      <button appButHover (click)="prev()"><--</button>
+      <button appButHover (click)="next()">--></button>
+      <button appButHover (click)="accept()">Add</button>
+      <button appButHover (click)="cancel()">Exit</button>
+    </div>
+    <div>
+        <app-lcd-screen [valueLcd]="this.mykey.getTag()"></app-lcd-screen>
+    </div>
+    <div class="keyboard">
+      <button class="keyButton" *ngFor="let button of this.mykey.buttonsList" (click)="this.mykey.add(button)">{{button.name}}</button>
+    </div>
+    <div class="instruction">
+      <ul>
+        <li>If you want remove letter use '<--'</li>
+        <li>If you want write B or C after A, use '-->' after A</li>
+        <li>If you want write C after B, use '-->' after B</li>
+        <li>If you want add subtitle use 'Add'</li>
+        <li>If you want go back use 'Exit'</li>
+      </ul>
+    </div>
+    <div>
+      <app-matrix-led></app-matrix-led>
+    </div>
+  </div>

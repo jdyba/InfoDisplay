@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div appFunctionKeys >
+    <button appButHover (click)="prev()">Prev</button>
+    <button appButHover (click)="next()" >Next</button>
+    <button appButHover (click)="accept()">Accept</button>
+    <button appButDisabled [disabled]="true">Exit</button>
+  </div>
+  <div>
+    <app-lcd-screen [valueLcd]="actualOptions" ></app-lcd-screen>
+  </div>
+  <div>
+    <app-matrix-led></app-matrix-led>
+  </div>
+</div>

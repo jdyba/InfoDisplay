@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="title">
+    <h3>Display information</h3>
+  </div>
+<div [ngSwitch]="this.service.depth">
+    <div *ngSwitchCase="0">
+        <app-start-menu></app-start-menu>
+    </div>
+    <div *ngSwitchCase="1">
+        <div [ngSwitch]="this.service.actualOption">
+            <div *ngSwitchCase="this.service.options[0]">
+                <app-choose-subtitle></app-choose-subtitle>
+            </div>
+            <div *ngSwitchCase="this.service.options[1]">
+                <app-choose-subtitle></app-choose-subtitle>
+            </div>
+            <div *ngSwitchCase="this.service.options[2]">
+                <app-add-subtitle></app-add-subtitle>
+            </div>
+            <div *ngSwitchDefault></div>
+        </div>
+    </div>
+    <div *ngSwitchCase="2">
+        <div [ngSwitch]="this.service.actualOption">
+            <div *ngSwitchCase="this.service.options[0]">
+                <app-show-subtitle></app-show-subtitle>
+            </div>
+            <div *ngSwitchCase="this.service.options[1]">
+                <app-delete-subtitle></app-delete-subtitle>
+            </div>
+            <div *ngSwitchCase="this.service.options[2]">
+                <app-show-added-subtitle></app-show-added-subtitle>
+            </div>
+            <div *ngSwitchDefault></div>
+        </div>
+    </div>
+    <div *ngSwitchDefault></div>
+</div>
+
+<div class="about">
+  <h4>App information</h4>
+  <h4 style="font-weight: normal">It is used in coach to inform passengers standing on bus stop</h4>
+  <p>This app was created to illustrate a real, physical device.
+     I created that display on my own using some electrical parts
+      among others: led matrix, lcd screen, membrane keyboard
+      controlled by arduino board programmed in C language.
+       The idea of programming it is that the app should reflect
+       the device in one hundred percent.
+      This app can help people use a real device. In this app you can:
+  </p>
+  <ul>
+    <li>choose a subtitle from memory</li>
+    <li>add a new subtitle using a specific keyboard(like in old phones)</li>
+    <li>remove a subtitle from memory</li>
+    <li>display a information on the matrix</li>
+  </ul>
+  Check it yourself
+</div>
+</div>
+
+
+

@@ -1,0 +1,32 @@
+
+.keyButton {
+  width: calc((100%/3) - 20px);
+  height: 40px;
+  margin: 10px;
+  font-size: 18px;
+  color:white;
+  background-color: rgb(108, 167, 255);
+  border: 2px solid rgb(39, 41, 63);
+  border-radius: 20px;
+}
+.keyboard {
+  width: calc(45% + 6px);
+  background-color: rgb(39, 41, 63);
+}
+.keyButton:hover {
+  background-color: rgb(58, 131, 240);
+  cursor: pointer;
+}
+.instruction {
+  color: rgb(65, 65, 65);
+  font-size: 17px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 600px;
+}
+
+.instruction > ul > li {
+  background-color: rgb(216, 132, 132);
+}
+.instruction > ul > li:nth-child(even) {
+  background-color: rgb(230, 181, 181);
+}

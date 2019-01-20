@@ -1,0 +1,15 @@
+.lcd {
+height: 50px;
+width: 45%;
+background-color:rgb(15, 233, 59);
+color: rgb(46, 46, 46);
+border: #333 3px solid;
+line-height: 50px;
+font-size: 20px;
+text-transform: uppercase;
+}
+
+h4 {
+  margin:0;
+  margin-top:20px;
+}

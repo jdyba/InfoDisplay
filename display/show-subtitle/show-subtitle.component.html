@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div appFunctionKeys>
+      <button appButDisabled [disabled]="true">Prev</button>
+      <button appButDisabled [disabled]="true">Next</button>
+      <button appButDisabled [disabled]="true">Accept</button>
+      <button appButHover (click)="cancel()">Exit</button>
+    </div>
+    <div>
+     <app-lcd-screen [valueLcd]="'Showing: ' + showedSubtitle"></app-lcd-screen>
+    </div>
+    <div>
+        <app-matrix-led [valueMatrix]="showedSubtitle"></app-matrix-led>
+    </div>
+  </div>
